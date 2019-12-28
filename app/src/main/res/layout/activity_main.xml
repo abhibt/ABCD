@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,8 +8,10 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/sText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="perform_action"
         android:text="A"
         android:textColor="#4CAF50"
         android:textSize="200sp"
@@ -16,8 +19,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView1"
+        android:layout_marginTop="82dp"
+        android:layout_marginBottom="549dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/sText"
-        android:onClick="perform_action"/>
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9546661915028941/9910790018" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
