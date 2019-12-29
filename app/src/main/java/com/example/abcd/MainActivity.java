@@ -35,7 +35,13 @@ public class MainActivity extends AppCompatActivity {
         // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
         // values/strings.xml.
         adView = findViewById(R.id.adView1);
-        AdRequest adRequest = new AdRequest.Builder().build();
+        //AdRequest adRequest = new AdRequest.Builder().build();
+
+        AdRequest adRequest = new AdRequest.Builder()
+                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                .addTestDevice("0C3B2F16993B787DFF1BDBF88E4B8EDD")
+                .build();
+        //final .Builder builder = AdRequest.Builder.addTestDevice("0C3B2F16993B787DFF1BDBF88E4B8EDD");
         adView.loadAd(adRequest);
     }
   // @Override
